@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* In your CSS file */
+.line-clamp {
+    display: -webkit-box;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+.para{
+  min-height: 10em;
+}
+input[type="radio"] {
+  display: none;
+}
+.star {
+  cursor: pointer;
+  width: 1.5em;
+  height: 1.5em;
+  color: #d1d5db; /* gray-300 */
+}
+.star:checked ~ .star {
+  color: #f59e0b; /* yellow-500 */
+}
+.star:hover,
+.star:hover ~ .star {
+  color: #fbbf24; /* yellow-400 */
+}
+.star:checked {
+  color: #f59e0b; /* yellow-500 */
+}
+.popup_box{
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-color: #f9f9f9;
+  box-shadow: 0px 0px 2px 0px rgba(41,34,35,1);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+}
+.positionCorner{
+  position: relative;
+  top:0;
+  left:100%;
+  transform: translate(-2%,-2%);
+  cursor: pointer;
+}
+.popup_content{
+  padding: 0;
+}
+.popup_text_para{
+  margin:0;
+  margin-top:0.7rem;
+  margin-bottom:1.3rem;
+}
+  

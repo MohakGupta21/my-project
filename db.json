@@ -1,0 +1,84 @@
+{
+  "movies": [
+    {
+      "id": "3",
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "description": "Harry Potter is a series of seven fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry. The main story arc concerns Harry's conflict with Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic, and subjugate all wizards and Muggles (non-magical people).",
+      "watched": true,
+      "release_year": "2001",
+      "genre": "Adventure Action",
+      "rating": 4,
+      "review": "An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world."
+    },
+    {
+      "id": "4",
+      "title": "Krrish",
+      "description": "Krrish is a 2006 Indian Hindi-language superhero film directed and produced by Rakesh Roshan. The film stars Hrithik Roshan in a dual role as father and son, with Priyanka Chopra, Naseeruddin Shah, Rekha, Sharat Saxena and Manini Mishra feature in supporting roles.",
+      "watched": false,
+      "release_year": "2006",
+      "genre": "Superhero Romance",
+      "rating": 3,
+      "review": "Critical reviews of the soundtrack were generally favourable, though some in the media called it a disappointment. Joginder Tuteja of Bollywood Hungama gave the album a rating of 3.5 out of 5 stars, saying that it was \"another good outing for Bollywood music lovers.\" He especially praised the songs \"Chori Chori\", \"Koi Tumsa Nahi\" and \"Pyaar Ki Ek Kahaani.\""
+    },
+    {
+      "id": "6",
+      "title": "Rocky Aur Rani Kii Prem Kahaani",
+      "description": "Flamboyant Punjabi Rocky and intellectual Bengali journalist Rani fall in love despite their differences. After facing family opposition, they decide to live with each other's relatives for three months before getting married.",
+      "watched": false,
+      "release_year": "2023",
+      "genre": "Romance Comedy",
+      "rating": 2,
+      "review": "Very average over the top Karan Johar film. So many melo dramatic scenes which I didn't like."
+    },
+    {
+      "id": "7",
+      "title": "Zindagi Na Milegi Dobara",
+      "description": "Friends Kabir, Imran and Arjun take a vacation in Spain before Kabir's marriage. The trip turns into an opportunity to mend fences, heal wounds, fall in love with life and combat their worst fears.",
+      "watched": true,
+      "release_year": "2011",
+      "genre": "Comedy Romance",
+      "rating": 5,
+      "review": "Superb film. Enjoyed it very much. It shows us how precious life and its moments are. Truly living the moment requires us to be unafraid, leaving all regrets and sorrows behind. Treating our pain, fixing ourselves and finding freedom which we all seek."
+    },
+    {
+      "id": "8",
+      "title": "The Prestige",
+      "description": "After a tragic accident, two stage magicians in 1890s London engage in a battle to create the ultimate illusion while sacrificing everything they have to outwit each other.",
+      "watched": true,
+      "release_year": "2006",
+      "genre": "Thriller Sci/Fi",
+      "rating": 4,
+      "review": "Very Nice Film"
+    },
+    {
+      "id": "9",
+      "title": "Dil Dhadakne Do",
+      "description": "On the occasion of their 30th anniversary, Kamal and Neelam invite their family and friends on a cruise. However, on the journey, they learn many life lessons and change for the better.",
+      "watched": false,
+      "release_year": "2015",
+      "genre": "Family Romance",
+      "rating": 3,
+      "review": "Really good movie. It is a family entertainer. You will enjoy it."
+    },
+    {
+      "id": "10",
+      "title": "Rockstar",
+      "description": "Rockstar is a 2011 Indian Hindi-language musical romantic drama film written and directed by Imtiaz Ali. The film stars Ranbir Kapoor and Nargis Fakhri in lead roles, with Aditi Rao Hydari, Piyush Mishra, Shernaz Patel, Kumud Mishra, Sanjana Sanghi, Aakash Dahiya and Shammi Kapoor in pivotal supporting roles. The soundtrack was composed by A. R. Rahman. The film marks the posthumous screen appearance of Shammi Kapoor, following his death on 14 August 2011.",
+      "watched": true,
+      "release_year": "2011",
+      "genre": "Romance/Musical",
+      "rating": 4,
+      "review": "Superb Film"
+    },
+    {
+      "id": "11",
+      "title": "Welcome",
+      "description": "Welcome is an Indian 2007 Hindi-language comedy film co-written and directed by Anees Bazmee. Loosely inspired by the 1999 comedy Mickey Blue Eyes, and marking the final screen appearance of actor Feroz Khan, it stars Anil Kapoor, Nana Patekar, Akshay Kumar, Katrina Kaif, Paresh Rawal, and Mallika Sherawat in prominent roles. Sunil Shetty and Malaika Arora feature in special appearances",
+      "watched": true,
+      "release_year": "2007",
+      "genre": "Comedy/Drama",
+      "rating": 4,
+      "review": "It is a good film. The comic timing of Akshay is superb."
+    }
+  ]
+}
