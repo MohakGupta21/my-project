@@ -3,7 +3,7 @@ import MovieCard from "./MovieCard";
 import { useState,useEffect } from "react";
 import axios from "axios";
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchMovies } from '../redux/movie/movieThunks';
+import { fetchMovies } from '../redux/movie/movieThunks.js';
 
 function Home() {
   const dispatch = useDispatch();
