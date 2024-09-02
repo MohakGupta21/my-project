@@ -59,12 +59,12 @@ function Add() {
 
   return (
     <div>
-      <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">
+      <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
         Add Movie
       </h2>
       <form action="/" method="POST" onSubmit={handleSubmit}>
-        <div class="mb-4">
-          <label for="title" class="block text-gray-700 text-sm font-bold mb-2">
+        <div className="mb-4">
+          <label htmlFor="title" className="block text-gray-700 text-sm font-bold mb-2">
             Title
           </label>
           <input
@@ -73,13 +73,13 @@ function Add() {
             name="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Movie Title"
             required
           />
         </div>
-        <div class="mb-4">
-          <label for="description" class="block text-gray-700 text-sm font-bold mb-2">
+        <div className="mb-4">
+          <label htmlFor="description" className="block text-gray-700 text-sm font-bold mb-2">
           Description
           </label>
           <textarea
@@ -89,15 +89,15 @@ function Add() {
             name="description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Description"
             required
           />
         </div>
-        <div class="mb-6">
+        <div className="mb-6">
           <label
-            for="watched"
-            class="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="watched"
+            className="block text-gray-700 text-sm font-bold mb-2"
           >
             Watched
           </label>
@@ -109,10 +109,10 @@ function Add() {
             onChange={(e) => setWatched(e.target.checked)}
           />
         </div>
-        <div class="mb-6">
+        <div className="mb-6">
           <label
-            for="release_year"
-            class="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="release_year"
+            className="block text-gray-700 text-sm font-bold mb-2"
           >
             Release Year
           </label>
@@ -122,13 +122,13 @@ function Add() {
             name="release_year"
             value={release_year}
             onChange={(e) => setReleaseYear(e.target.value)}
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Realease Year"
             required
           />
         </div>
-        <div class="mb-6">
-          <label for="genre" class="block text-gray-700 text-sm font-bold mb-2">
+        <div className="mb-6">
+          <label htmlFor="genre" className="block text-gray-700 text-sm font-bold mb-2">
             Genre
           </label>
           <input
@@ -137,7 +137,7 @@ function Add() {
             name="genre"
             value={genre}
             onChange={(e) => setGenre(e.target.value)}
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Genre"
             required
           />
@@ -150,6 +150,7 @@ function Add() {
                 onClick={() => {
                   setRating(star);
                 }}
+                key={index}
                 htmlFor={`star${index}`}
                 className="star text-yellow-500 cursor-pointer"
               >
@@ -158,10 +159,10 @@ function Add() {
             ))}
           </div>
         </div>
-        <div class="mb-6">
+        <div className="mb-6">
           <label
-            for="review"
-            class="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="review"
+            className="block text-gray-700 text-sm font-bold mb-2"
           >
             Review
           </label>
@@ -172,14 +173,14 @@ function Add() {
             name="review"
             value={review}
             onChange={(e) => setReview(e.target.value)}
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Review"
           />
         </div>
-        <div class="flex items-center justify-between">
+        <div className="flex items-center justify-between">
           <button
             type="submit"
-            class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             Add
           </button>

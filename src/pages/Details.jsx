@@ -14,7 +14,7 @@ function Details() {
   const dispatch = useDispatch();
   const movies = useSelector((state)=>state.movies.movies);
   const movieStatus = useSelector((state) => state.movies.status);
-  const movie = movies.filter((movie)=>(movie.id===params.id));
+  const movie = movies.filter((movie)=>(movie.id===parseInt(params.id)));
 
   useEffect(()=>{
     if(movieStatus=="idle"){

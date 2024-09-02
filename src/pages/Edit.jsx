@@ -12,7 +12,7 @@ const Edit = () => {
   const navigate = useNavigate();
 
   const { movies, status } = useSelector((state) => state.movies);
-  const movie = movies.find((movie) => movie.id === params.id);
+  const movie = movies.find((movie) => movie.id === parseInt(params.id));
 
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -40,8 +40,9 @@ const Edit = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(updateMovie({ id: params.id, title, description, watched, release_year, genre, rating, review }))
-      .then(() => {
+    dispatch(updateMovie({ id: parseInt(params.id), title, description, watched, release_year, genre, rating, review }))
+      .then((res) => {
+        console.log(res);
         alert('Movie Updated Successfully!');
         navigate('/');
       })

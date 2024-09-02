@@ -22,11 +22,15 @@ function Home() {
   else if(movieStatus === 'failed')
     return <div>Failed</div>
 
-  else return (
+  else { 
+    console.log(movies.length);
+    console.log(movies.data);
+    return (
+    
     <div className="container mx-auto p-0.5">
       <h1 className="text-3xl font-bold mb-4">Movie Watchlist</h1>
       <div className="flex flex-wrap -m-4">
-        {movies.map((movie,index) => (
+        {movies.length>0 && movies.map((movie,index) => (
             <MovieCard
               key={index}
               id={movie.id}
@@ -34,9 +38,14 @@ function Home() {
               description={movie.description || "No description available"}
             />
         ))}
+        {
+          movies.length==0 && <div className="container p-3">No Movies to display</div>
+        }
       </div>
+
     </div>
   );
+}
 }
 
 export default Home;
