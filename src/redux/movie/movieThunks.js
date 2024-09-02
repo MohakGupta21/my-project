@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-const API = 'http://localhost:8080'
+const API = 'https://project-data-1-ij9s.onrender.com'
 export const fetchMovies = createAsyncThunk('movies/fetchMovies', async () => {
   const response = await axios.get(`${API}/movies`);
   return response.data.data;
