@@ -12,7 +12,7 @@ const Edit = () => {
   const navigate = useNavigate();
 
   const { movies, status } = useSelector((state) => state.movies);
-  const movie = movies.find((movie) => movie.id === parseInt(params.id));
+  const movie = movies.find((movie) => movie.id === params.id);
 
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');

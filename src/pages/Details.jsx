@@ -14,14 +14,14 @@ function Details() {
   const dispatch = useDispatch();
   const movies = useSelector((state)=>state.movies.movies);
   const movieStatus = useSelector((state) => state.movies.status);
-  const movie = movies.filter((movie)=>(movie.id===parseInt(params.id)));
+  const movie = movies.filter((movie)=>(movie.id===params.id));
 
   useEffect(()=>{
     if(movieStatus=="idle"){
         dispatch(fetchMovies());
     }
-    console.log(movies);
-    console.log(movie);
+    // console.log(movies);
+    // console.log(movie);
   },[movieStatus,dispatch])
 
   return (
