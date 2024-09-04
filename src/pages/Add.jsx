@@ -15,7 +15,7 @@ function Add() {
   const [rating, setRating] = useState(0);
   const [review, setReview] = useState("");
   const navigate = useNavigate();
-  const [id, setId] = useState("");
+  const [id, setId] = useState(null);
   const stars = [1, 2, 3, 4, 5];
 
   const dispatch = useDispatch();
@@ -27,7 +27,7 @@ function Add() {
       dispatch(fetchMovies());
     }
 
-    setId(String(parseInt(movies[movies.length-1]?.id)+1));
+    setId((parseInt(movies[movies.length-1]?.id)+1));
 
   }, [status, dispatch]);
 
@@ -36,7 +36,7 @@ function Add() {
     console.log("hey");
     dispatch(
       addMovie({
-        id: id,
+        id,
         title,
         description,
         watched,
@@ -48,7 +48,7 @@ function Add() {
     )
       .then(() => {
         alert("Movie Added Successfully!");
-        dispatch(fetchMovies());//To Update
+        // dispatch(fetchMovies());//To Update
         navigate("/");
       })
       .catch((error) => {

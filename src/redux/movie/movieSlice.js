@@ -23,16 +23,18 @@ const movieSlice = createSlice({
         state.error = action.error.message;
       })
       .addCase(updateMovie.fulfilled, (state, action) => {
+        state.status = 'idle';
         const index = state.movies.findIndex(movie => movie.id === action.payload.id);
         if (index !== -1) {
           state.movies[index] = action.payload;
         }
       })
       .addCase(addMovie.fulfilled,(state,action)=>{
-        state.status = 'succeeded';
+        state.status = 'idle';
         state.movies = action.payload;
       })
       .addCase(deleteMovie.fulfilled, (state, action) => {
+        state.status = 'idle';
         const index = state.movies.findIndex(movie => movie.id === action.payload.id);
         if (index !== -1) {
           state.movies.splice(index,1);

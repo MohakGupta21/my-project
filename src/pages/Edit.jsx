@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import Star from '../svgs/Star';
-import EmptyStar from '../svgs/EmptyStar';
-import { fetchMovies, updateMovie } from '../redux/movie/movieThunks';
+import React, { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import Star from "../svgs/Star";
+import EmptyStar from "../svgs/EmptyStar";
+import { fetchMovies, updateMovie } from "../redux/movie/movieThunks";
 
 const Edit = () => {
   const params = useParams();
@@ -12,18 +12,18 @@ const Edit = () => {
   const navigate = useNavigate();
 
   const { movies, status } = useSelector((state) => state.movies);
-  const movie = movies.find((movie) => movie.id === params.id);
+  const movie = movies.find((movie) => movie.id === parseInt(params.id));
 
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
   const [watched, setWatched] = useState(false);
-  const [release_year, setReleaseYear] = useState('');
-  const [genre, setGenre] = useState('');
+  const [release_year, setReleaseYear] = useState("");
+  const [genre, setGenre] = useState("");
   const [rating, setRating] = useState(0);
-  const [review, setReview] = useState('');
+  const [review, setReview] = useState("");
 
   useEffect(() => {
-    if (status === 'idle') {
+    if (status === "idle") {
       dispatch(fetchMovies());
     }
 
@@ -40,24 +40,36 @@ const Edit = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(updateMovie({ id: parseInt(params.id), title, description, watched, release_year, genre, rating, review }))
-      .then((res) => {
-        console.log(res);
-        alert('Movie Updated Successfully!');
-        navigate('/');
+    dispatch(
+      updateMovie({
+        id: parseInt(params.id),
+        title,
+        description,
+        watched,
+        release_year,
+        genre,
+        rating,
+        review,
       })
-      .catch((error) => {
-        console.error(error);
-        alert(error.message);
-      });
+    ).then((res)=>{
+      navigate("/");
+
+    }).catch((err)=>{
+      console.log(err);
+    });
   };
 
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Edit Movie</h2>
+      <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
+        Edit Movie
+      </h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label htmlFor="title" className="block text-gray-700 text-sm font-bold mb-2">
+          <label
+            htmlFor="title"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
             Title
           </label>
           <input
@@ -70,7 +82,10 @@ const Edit = () => {
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="desc" className="block text-gray-700 text-sm font-bold mb-2">
+          <label
+            htmlFor="desc"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
             Description
           </label>
           <textarea
@@ -83,7 +98,10 @@ const Edit = () => {
           />
         </div>
         <div className="mb-6">
-          <label htmlFor="watched" className="block text-gray-700 text-sm font-bold mb-2">
+          <label
+            htmlFor="watched"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
             Watched
           </label>
           <input
@@ -94,7 +112,10 @@ const Edit = () => {
           />
         </div>
         <div className="mb-6">
-          <label htmlFor="release_year" className="block text-gray-700 text-sm font-bold mb-2">
+          <label
+            htmlFor="release_year"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
             Release Year
           </label>
           <input
@@ -107,7 +128,10 @@ const Edit = () => {
           />
         </div>
         <div className="mb-6">
-          <label htmlFor="genre" className="block text-gray-700 text-sm font-bold mb-2">
+          <label
+            htmlFor="genre"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
             Genre
           </label>
           <input
@@ -134,7 +158,10 @@ const Edit = () => {
           </div>
         </div>
         <div className="mb-6">
-          <label htmlFor="review" className="block text-gray-700 text-sm font-bold mb-2">
+          <label
+            htmlFor="review"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
             Review
           </label>
           <textarea

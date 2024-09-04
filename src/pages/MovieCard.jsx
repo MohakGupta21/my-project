@@ -16,14 +16,13 @@ const MovieCard = (props) => {
     console.log(props);
     dispatch(deleteMovie(props.id)).then((res)=>{
       
-      console.log(res.data);
-      alert("Movie Deleted Successfully!");
+      console.log(res);
       setShowPopup(false);
-      window.location.reload();
+      // window.location.reload();
 
     }).catch((err)=>{
       console.log(err);
-      alert(err);
+      // alert(err);
     })
   };
   return (
